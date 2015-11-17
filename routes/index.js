@@ -19,4 +19,8 @@ router.get('/logout', function(req, res) {
   res.render('logout', {title: 'Logout'});
 });
 
+router.get('/user', function(req, res) {
+  res.render('user', {title: 'User'});
+});
+
 module.exports = router;
