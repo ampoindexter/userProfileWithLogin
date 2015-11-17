@@ -6,13 +6,16 @@ block css
 block content
   .container
     div
-      .form-group
+      form.form-group.form-signin
+        h2.form-signin-heading Please sign in
         label(for='username') Username
-        input#username.form-control(type='text', placeholder='Username')
+        input#username.form-control(type='text', placeholder='Username', required autofocus)
       .form-group
         label(for='pw') Password
-        input#pw.form-control(type='password', placeholder='Password')
-      button.btn.btn-default#login Login
+        input#pw.form-control(type='password', placeholder='Password', required)
+        label(for='remember') Remember Me?  
+        input#rememberChk(type='checkbox', value='remember-me')
+        button.btn.btn-lg.btn-primary.btn-block#login(type='submit') Login
 
 block js
   script(src='js/login.js')

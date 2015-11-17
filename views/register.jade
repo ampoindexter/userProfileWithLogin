@@ -6,16 +6,21 @@ block css
 block content
   .container
     div
-      .form-group
+      form.form-group.form-register
+        h2.form-register-heading Register Here
+        label(for='inputEmail') Email address
+        input.form-control#inputEmail(type='email', placeholder='Email address', required autofocus)
         label(for='username') Username
-        input#username.form-control(type='text', placeholder='Username')
+        input#username.form-control(type='text', placeholder='Username', required)
       .form-group
         label(for='pw1') Password
-        input#pw1.form-control(type='password', placeholder='Password')
+        input#pw1.form-control(type='password', placeholder='Password', required)
       .form-group
         label(for='pw2') Password
-        input#pw2.form-control(type='password', placeholder='Password (again)')
-      button.btn.btn-default#register Register
+        input#pw2.form-control(type='password', placeholder='Reenter password', required)
+        label(for='remember') Remember Me?
+        input#rememberChk(type='checkbox', value='remember-me')
+        button.btn.btn-lg.btn-primary.btn-block#register(type='submit') Register
 
 block js
   script(src='js/register.js')
